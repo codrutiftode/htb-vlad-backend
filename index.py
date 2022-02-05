@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask import json
-from flask import jsonify
+from flask import request
 
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def api():
 
 @app.route('/api/getAllIngredients')
 def getAllIngredients():
-    # os.path.normpath(os.path.join('/htb-vlad-backend/', "..", ".."))
+    global allIngredients
     filename = os.path.join(app.static_folder, './data/ingredients.json')
     with open(filename) as ingredients_file:
         allIngredients = json.load(ingredients_file)
@@ -26,6 +26,11 @@ def getAllIngredients():
     response = jsonify(allIngredients)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+@app.route('/api/selectIngredients', methods = ['GET'])
+def selectIngredients():
+    selectedIngredients = request.args.getlist('ingredients')
+    return str(selectedIngredients)
 
 @app.route('/')
 def home():
