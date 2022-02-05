@@ -123,7 +123,7 @@
         {
             "title":"DAIRY",
             "id":4,
-            "image":"https://https://americanprofile.com/wp-content/uploads/2013/06/17396956.jpg",
+            "image":"https://americanprofile.com/wp-content/uploads/2013/06/17396956.jpg",
             "ingredients":
             [
                 {"title":"butter",
@@ -156,7 +156,7 @@
         {
             "title":"CARBS",
             "id":5,
-            "image":"https://https://www.superyachtsupplies.co.uk/wp-content/uploads/2015/04/shutterstock_85668670-1500x1000.jpg",
+            "image":"https://www.superyachtsupplies.co.uk/wp-content/uploads/2015/04/shutterstock_85668670-1500x1000.jpg",
             "ingredients":
             [
                 {"title":"pasta",
@@ -217,7 +217,7 @@
     {
             "title":"OTHER",
             "id":7,
-            "image":"https://https://images.indianexpress.com/2020/09/sugar-output-bloomberg-1200.jpg",
+            "image":"https://images.indianexpress.com/2020/09/sugar-output-bloomberg-1200.jpg",
             "ingredients":
             [
                 {"title":"brown sauce",
