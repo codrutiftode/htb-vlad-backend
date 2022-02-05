@@ -1,4 +1,7 @@
+import os
 from flask import Flask
+from flask import json
+from flask import jsonify
 
 
 app = Flask(__name__)
@@ -12,6 +15,14 @@ def api():
 #     with open('data.json', mode='r') as my_file:
 #         text = my_file.read()
 #         return text
+
+@app.route('/api/getAllIngredients')
+def getAllIngredients():
+    # os.path.normpath(os.path.join('/htb-vlad-backend/', "..", ".."))
+    filename = os.path.join(app.static_folder, './data/ingredients.json')
+    with open(filename) as ingredients_file:
+        allIngredients = json.load(ingredients_file)
+    return allIngredients
 
 @app.route('/')
 def home():
