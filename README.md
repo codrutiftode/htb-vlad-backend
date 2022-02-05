@@ -1,7 +1,7 @@
 # Installation instructions
 - Install python
 - Create virtual env using `python -m venv env`
-- Activate env on windows using `venv\Scripts\activate.bat`
+- Activate env on windows using `env\Scripts\activate.bat`
 - Install flask: `python -m pip install Flask`
 
 # Build instructions
