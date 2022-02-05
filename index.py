@@ -27,7 +27,19 @@ def getAllIngredients():
 @app.route('/api/selectIngredients', methods = ['GET'])
 def selectIngredients():
     selectedIngredients = request.args.getlist('ingredients')
-    return str(selectedIngredients)
+    getRecipes(selectedIngredients)
+
+@app.route('/api/getRecipes')   ## add helper function getIngIndex()
+def getRecipes(selectedIngredients):
+    allIngIndex = getIngIndex()
+    
+@app.route('/api/getIngIndex')
+def getIngIndex():
+    global allRecipes
+    filename = os.path.join(app.static_folder, './data/recipes.json')
+    with open(filename) as recipes_file:
+        allRecipes = json.load(recipes_file)
+    return allRecipes       ## change this, needs to be usable data type, or change later
 
 @app.route('/')
 def home():
