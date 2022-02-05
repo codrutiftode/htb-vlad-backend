@@ -1,8 +1,8 @@
 {
-    "CATEGORIES":
+    "Categories":
     [
         {
-            "title":"VEGETABLES",
+            "title":"Vegetables",
             "id":1,
             "image":"https://www.shakahariblog.com/wp-content/uploads/2014/06/Vegetables1.jpg",
             "ingredients":
@@ -60,7 +60,7 @@
             ]           
         },
         {
-            "title":"FRUIT",
+            "title":"Fruit",
             "id":2,
             "image":"https://fruitguys.com/wp-content/uploads/2014/09/stonefruit_mixed_iStock_000020308889Medium_edit_0.jpg",
             "ingredients":
@@ -93,7 +93,7 @@
             ]
         },
         {
-            "title":"MEAT",
+            "title":"Meat",
             "id":3,
             "image":"https://ston.koreatimes.co.kr/web/IMAGE/upload/newsV2/images/202101/e9221b8981424695bfaab5f66903c92e.jpg",
             "ingredients":
@@ -121,7 +121,7 @@
             ]
         },
         {
-            "title":"DAIRY",
+            "title":"Dairy",
             "id":4,
             "image":"https://americanprofile.com/wp-content/uploads/2013/06/17396956.jpg",
             "ingredients":
@@ -154,7 +154,7 @@
             ]
         },
         {
-            "title":"CARBS",
+            "title":"Carbs",
             "id":5,
             "image":"https://www.superyachtsupplies.co.uk/wp-content/uploads/2015/04/shutterstock_85668670-1500x1000.jpg",
             "ingredients":
@@ -192,7 +192,7 @@
             ]
         },
         {
-            "title":"HERBS AND SPICES",
+            "title":"Spices",
             "id":6,
             "image":"https://i2.wp.com/healthylivingassociation.org/wp-content/uploads/2016/09/herbs-and-spices.jpg",
             "ingredients":
@@ -215,7 +215,7 @@
             ]
         },
     {
-            "title":"OTHER",
+            "title":"Other",
             "id":7,
             "image":"https://images.indianexpress.com/2020/09/sugar-output-bloomberg-1200.jpg",
             "ingredients":
