@@ -1,7 +1,6 @@
 import os
 from flask import Flask
 from flask import json
-from flask import jsonify
 from flask import request
 
 
@@ -23,10 +22,7 @@ def getAllIngredients():
     filename = os.path.join(app.static_folder, './data/ingredients.json')
     with open(filename) as ingredients_file:
         allIngredients = json.load(ingredients_file)
-
-    response = jsonify(allIngredients)
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
+    return allIngredients
 
 @app.route('/api/selectIngredients', methods = ['GET'])
 def selectIngredients():
