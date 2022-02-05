@@ -12,3 +12,4 @@
 
 ### Production (Heroku):<br>
 - commit to the main branch - this should automatically deploy to the Heroku server
+- visit `https://htb-vlad-backend.herokuapp.com/`
