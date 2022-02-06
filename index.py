@@ -65,7 +65,7 @@ def getRecipesFromIngredients():
 @cross_origin()
 def sendDiet():
     global diet
-    diet = request.args.getString('diet')
+    diet = request.args.get('diet')
 
 def pruneDiet(initialRecipes):
     sentDiet = diet
