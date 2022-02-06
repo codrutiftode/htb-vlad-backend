@@ -26,7 +26,7 @@
       "1 onion",
       "2 peppers",
       "2 sticks celery",
-      "1 jar Cook With M&S Cajun paste",
+      "1 jar Cook With MS Cajun paste",
       "650ml boiling water",
       "3 spring onions",
       "1 bunch parsley",
@@ -42,7 +42,7 @@
     "recipe_steps": [
       "1 Rinse the rice with cold water until it runs clear and set aside. ",
       " 2 Add the olive oil to a large non-stick pan over a medium-high heat and fry the Plant Kitchen no chorizo posh puppies for 2-3 minutes until they begin to take on some colour.",
-      "3 Add all the chopped veg, season and cook for 5 minutes until softened. Then stir in the jar of Cook With M&S Cajun paste and cook for another minute.",
+      "3 Add all the chopped veg, season and cook for 5 minutes until softened. Then stir in the jar of Cook With MS Cajun paste and cook for another minute.",
       "4 Add the rice, and stir to ensure it is evenly coated in the paste before adding the boiling water.",
       " 5 Bring to the boil and then reduce the heat to medium-low, cover loosely and simmer for 15-20 minutes or until the rice is cooked and the water is fulled absorbed, stirring occasionally. If the pan becomes too try, add a splash more water.",
       "6 When the rice is cooked, fluff it up with a fork, scatter over the spring onions and parsley, and then squeeze over the lemon. Serve with the sweet baby leaf salad."
@@ -135,8 +135,8 @@
       "sugar": "10.4g"
     },
     "recipe_steps": [
-      "1 Preheat the oven to 200°C/ 180°C fan/ gas mark 6",
-      "2 Add all the veg and chopped tomatoes to a roasting tin, season with salt and pepper, and then scatter over half the Cook With M&S Cajun seasoning. Drizzle with olive oil and toss so everything is evenly coated. Place in the oven for 30 minutes.",
+      "1 Preheat the oven to 200C/ 180C fan/ gas mark 6",
+      "2 Add all the veg and chopped tomatoes to a roasting tin, season with salt and pepper, and then scatter over half the Cook With MS Cajun seasoning. Drizzle with olive oil and toss so everything is evenly coated. Place in the oven for 30 minutes.",
       "3 Remove the roasting tin from the oven, stir and then place the salmon fillets on top of the veg. Sprinkle a pinch of Cajun seasoning over each fillet. Bake for another 12-15 minutes, until the salmon is cooked.",
       "4 Serve with a good squeeze of lemon, if you like."
     ]
@@ -210,8 +210,8 @@
       " 2 tsp Cook with M&S easy chilli",
       " 1 medium leek",
       " 8medium eggs",
-      "200g feta",
-      "125g asparagus"
+      " 200g feta",
+      " 125g asparagus"
     ],
     "nutrition": {
       "calories": 477,
@@ -251,8 +251,8 @@
       " 2 tsp Cook with M&S easy chilli",
       " 1 medium leek",
       " 8medium eggs",
-      "200g feta",
-      "125g asparagus"
+      " 200g feta",
+      " 125g asparagus"
     ],
     "nutrition": {
       "calories": 477,
@@ -412,7 +412,7 @@
       "2 Cut up carrots and celery, place in pot and saute.",
       "3 Add in chicken and stock or broth and mix together well. Season with salt, pepper, hot sauce, whatever you desire",
       "4 Allow it to simmer on low heat for 2 hours mixing every so often.",
-	  "5 If adding noodles, add in pasta and allow pasta to cook"
+	    "5 If adding noodles, add in pasta and allow pasta to cook"
 	  ]
   },
   {
@@ -449,13 +449,13 @@
       "sugar": "10.4g"
     },
     "recipe_steps": [
-      "1 Chop and sauté the onions and put the aside for a while",
+      "1 Chop and saute the onions and put the aside for a while",
       "2 Melt the butter on a pan and add the flour to it",
       "3 Brown the flour on medium heat until the mixture is dark brown",
       "4 Add the bouillon in small batches while stirring with a whisker",
-	  "5 Let the sauce boil and thicken for few minutes",
-	  "6 Add the onions and ground some pepper in the sauce",
-	  "7 (optional) Add preferred meat to the sauce or use as is"
+	    "5 Let the sauce boil and thicken for few minutes",
+	    "6 Add the onions and ground some pepper in the sauce",
+	    "7 (optional) Add preferred meat to the sauce or use as is"
 	  ]
   },
   {
@@ -484,10 +484,10 @@
       " 1 quart chicken or veggie stock",
       " 11 ounces peeled and sliced waxy potatoes",
       " 1 bay leaf",
-	  " ¾ cup heavy cream",
-	  " white pepper",
-	  " (optional) ½ teaspoon ground nutmeg",
-	  " (optional) ½ tablespoon dill weed"
+	    " 3/4 cup heavy cream",
+	    " white pepper",
+	    " (optional) 1/2 teaspoon ground nutmeg",
+	    " (optional) 1/2 tablespoon dill weed"
     ],
     "nutrition": {
       "calories": 477,
@@ -500,7 +500,7 @@
       "2 Melt the butter in a pot on medium-low heat, add chopped leeks and potatoes. Stir until leeks are sweat.",
       "3 Add stock, bay leaf, pepper and optional ingredients now. Raise heat to medium-high, simmer until potatoes are tender.",
       "4 After removing the pot from the heat, remove the bay leaf and immersion blend pot until you reach a desired consistency.",
-	  "5 Stir in heavy cream and salt to taste."
+	    "5 Stir in heavy cream and salt to taste."
 	  ]
   }
 ]

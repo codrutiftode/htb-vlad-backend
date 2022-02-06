@@ -1,3 +1,4 @@
+import math
 import os
 from flask import Flask
 from flask import json
@@ -10,6 +11,7 @@ app = Flask(__name__)
 @app.route('/api/hello')
 def api():
     return "Hey"
+
 
 # @app.route('/api')
 # def api():
@@ -28,6 +30,69 @@ def getAllIngredients():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+
+"""
+@app.route('/api/getRecipes/<idArray>', methods = ['GET', 'POST'])
+def getRecipes(idArray):
+    ignts = getAllIngredients()
+
+
+@app.route('/api/getIngredients/<idArray>', methods = ['GET', 'POST'])
+def getIngredients(idArray):
+    recipeArray = []
+    for i in idArray:
+        if allIngredients['Categories']['id':1]['id'].values() == i:
+            recipeArray.append(getIngredientObj(i))
+    return recipeArray
+"""
+
+global allIngredients, allRecipes
+filename = os.path.join(app.static_folder, './data/ingredients.json')
+with open(filename) as ingredients_file:
+    allIngredients = json.load(ingredients_file)
+
+filename = os.path.join(app.static_folder, './data/recipes.json')
+with open(filename) as recipes_file:
+    allRecipes = json.load(recipes_file)
+
+
+@app.route('/api/getIngredientObj/<id>', methods = ['GET', 'POST'])
+def getIngredientObj(id):
+    id = int(id)
+    categories = allIngredients['Categories']
+    for cat in categories:
+        if cat['id'] == math.floor(id / 100):
+            for ingredient in cat['ingredients']:
+                if ingredient['id'] == id:
+                    return ingredient
+
+
+def getRecipeObj(id):
+    id = int(id)
+
+
+
+@app.route('/api/getIngredientName/<id>', methods = ['GET', 'POST'])
+def getIngredientName(id):
+    return (getIngredientObj(id))['title']
+
+
+@app.route('/api/getRecipeIngredients/<id>', methods = ['GET', 'POST'])
+def getRecipeIngredients(id):
+    return (getRecipeObj(id))['ingredients']
+
+
+    """
+    if allIngredients['Categories']['id':math.floor(id/100)]['id'].values() == id:
+        return allIngredients['Categories']['id':math.floor(id/100)]['id':id]
+    else:
+        return {}
+        """
+
+
+
+# stupid:
+"""
 @app.route('/api/selectIngredients', methods = ['GET'])
 def selectIngredients():
     selectedIngredients = request.args.getlist('ingredients')
@@ -44,7 +109,7 @@ def getIngIndex():
     with open(filename) as recipes_file:
         allRecipes = json.load(recipes_file)
     return allRecipes       ## change this, needs to be usable data type, or change later
-
+"""
 @app.route('/')
 def home():
     return 'Home Page Route'
