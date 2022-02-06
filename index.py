@@ -111,6 +111,7 @@ initRecipes()
 ###-------------------------------------------------------------###
 
 
+# returns the whole ingredient object, given its ID (ingredients.json)
 @app.route('/api/getIngredientObj/<id>', methods = ['GET', 'POST'])
 def getIngredientObj(id):
     id = int(id)
@@ -122,6 +123,7 @@ def getIngredientObj(id):
                     return ingredient
 
 
+# returns the whole recipe object, given its ID (recipes.json)
 @app.route('/api/getRecipeObj/<id>', methods = ['GET', 'POST'])
 def getRecipeObj(id):
     id = int(id)
@@ -132,13 +134,13 @@ def getRecipeObj(id):
             return ""
 
 
-# returns a title of an ingrediant, given its ID
+# returns a title of an ingredient, given its ID
 @app.route('/api/getIngredientName/<id>', methods = ['GET', 'POST'])
 def getIngredientName(id):
     return (getIngredientObj(id))['title']
 
 
-# 
+# returns a list of ingredients, given a recipe ID
 @app.route('/api/getRecipeIngredients/<id>', methods = ['GET', 'POST'])
 def getRecipeIngredients(id):
     return (getRecipeObj(id))['ingredients']
