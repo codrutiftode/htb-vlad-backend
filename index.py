@@ -5,7 +5,6 @@ from flask import json
 from flask import jsonify
 from flask import request
 from flask_cors import CORS, cross_origin
-import flask_cors
 
 
 app = Flask(__name__)
@@ -59,7 +58,6 @@ def getRecipesFromIngredients():
                 recipe_rank_tuples[j] = recipe_rank_tuples[j+1]  
                 recipe_rank_tuples[j+1] = temp  
     final_recipes = [t[0] for t in recipe_rank_tuples]
-    print(final_recipes)
 
     return jsonify(final_recipes)
     
