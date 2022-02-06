@@ -13,11 +13,11 @@ def api():
     return "Hey"
 
 
-# @app.route('/api')
-# def api():
-#     with open('data.json', mode='r') as my_file:
-#         text = my_file.read()
-#         return text
+@app.route('/api')
+def api():
+    with open('data.json', mode='r') as my_file:
+        text = my_file.read()
+        return text
 
 def parseRecipeIngredients(recipe):
     ingredients = recipe['ingredients']
@@ -40,7 +40,12 @@ def getRecipeRanks(ingredients, recipes):
     return ranks
 
 
-    
+@app.route('/api/getRecipesFromIngredients/<ingredientString>', methods=['GET', 'POST'])
+def getRecipesFromIngredients(ingredientString):
+    print(ingredientString)
+
+
+
 
 
 @app.route('/api/getAllIngredients')
