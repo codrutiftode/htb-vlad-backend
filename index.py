@@ -59,7 +59,10 @@ def getRecipesFromIngredients():
                 recipe_rank_tuples[j+1] = temp  
     final_recipes = [t[0] for t in recipe_rank_tuples]
 
-    return str(final_recipes)
+    # Prevent CORS error
+    response = jsonify(final_recipes)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
     
 
 
