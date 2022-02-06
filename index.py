@@ -13,11 +13,11 @@ def api():
     return "Hey"
 
 
-@app.route('/api')
-def api():
-    with open('data.json', mode='r') as my_file:
-        text = my_file.read()
-        return text
+# @app.route('/api')
+# def api():
+#     with open('data.json', mode='r') as my_file:
+#         text = my_file.read()
+#         return text
 
 def parseRecipeIngredients(recipe):
     ingredients = recipe['ingredients']
@@ -27,6 +27,7 @@ def parseRecipeIngredients(recipe):
     return ingredients
 
 
+#@app.route('/api/getRecipeRanks/<ingredients>')
 def getRecipeRanks(ingredients, recipes):
     ranks = [0 for i in range(len(recipes))]
     for r in range(len(ranks)):
@@ -42,10 +43,7 @@ def getRecipeRanks(ingredients, recipes):
 
 @app.route('/api/getRecipesFromIngredients/<ingredientString>', methods=['GET', 'POST'])
 def getRecipesFromIngredients(ingredientString):
-    print(ingredientString)
-
-
-
+    return ingredientString
 
 
 @app.route('/api/getAllIngredients')
@@ -74,6 +72,8 @@ def getIngredients(idArray):
             recipeArray.append(getIngredientObj(i))
     return recipeArray
 """
+
+###---- INITIALISING JSON FILES FOR INGREDIENTS AND RECIPES ----###
 def initIngredients():
     global allIngredients
     filename = os.path.join(app.static_folder, './data/ingredients.json')
@@ -90,6 +90,8 @@ def initRecipes():
 
 initIngredients()
 initRecipes()
+
+###-------------------------------------------------------------###
 
 
 @app.route('/api/getIngredientObj/<id>', methods = ['GET', 'POST'])
@@ -109,13 +111,17 @@ def getRecipeObj(id):
     for r in allRecipes:
         if r['id'] == id:
             return str(r['ingredients'])
+        else:
+            return ""
 
 
+# returns a title of an ingrediant, given its ID
 @app.route('/api/getIngredientName/<id>', methods = ['GET', 'POST'])
 def getIngredientName(id):
     return (getIngredientObj(id))['title']
 
 
+# 
 @app.route('/api/getRecipeIngredients/<id>', methods = ['GET', 'POST'])
 def getRecipeIngredients(id):
     return (getRecipeObj(id))['ingredients']
