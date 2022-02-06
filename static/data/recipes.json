@@ -39,13 +39,16 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 0,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
-      "1 Rinse the rice with cold water until it runs clear and set aside. ",
+      " 1 Rinse the rice with cold water until it runs clear and set aside. ",
       " 2 Add the olive oil to a large non-stick pan over a medium-high heat and fry the Plant Kitchen no chorizo posh puppies for 2-3 minutes until they begin to take on some colour.",
-      "3 Add all the chopped veg, season and cook for 5 minutes until softened. Then stir in the jar of Cook With MS Cajun paste and cook for another minute.",
-      "4 Add the rice, and stir to ensure it is evenly coated in the paste before adding the boiling water.",
+      " 3 Add all the chopped veg, season and cook for 5 minutes until softened. Then stir in the jar of Cook With MS Cajun paste and cook for another minute.",
+      " 4 Add the rice, and stir to ensure it is evenly coated in the paste before adding the boiling water.",
       " 5 Bring to the boil and then reduce the heat to medium-low, cover loosely and simmer for 15-20 minutes or until the rice is cooked and the water is fulled absorbed, stirring occasionally. If the pan becomes too try, add a splash more water.",
-      "6 When the rice is cooked, fluff it up with a fork, scatter over the spring onions and parsley, and then squeeze over the lemon. Serve with the sweet baby leaf salad."
+      " 6 When the rice is cooked, fluff it up with a fork, scatter over the spring onions and parsley, and then squeeze over the lemon. Serve with the sweet baby leaf salad."
     ]
   },
   {
@@ -134,6 +137,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 0,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
       "1 Preheat the oven to 200C/ 180C fan/ gas mark 6",
       "2 Add all the veg and chopped tomatoes to a roasting tin, season with salt and pepper, and then scatter over half the Cook With MS Cajun seasoning. Drizzle with olive oil and toss so everything is evenly coated. Place in the oven for 30 minutes.",
@@ -178,6 +184,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 0,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
       "1 Preheat the oven to 200C/ 180C fan/ gas mark 6",
       "2 Add all the veg and chopped tomatoes to a roasting tin, season with salt and pepper, and then scatter over half the Cook With M&S Cajun seasoning. Drizzle with olive oil and toss so everything is evenly coated. Place in the oven for 30 minutes.",
@@ -219,6 +228,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 1,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
       "1 Preheat the oven to 200C/ 180C fan/ gas mark 6",
       "2 Add all the veg and chopped tomatoes to a roasting tin, season with salt and pepper, and then scatter over half the Cook With M&S Cajun seasoning. Drizzle with olive oil and toss so everything is evenly coated. Place in the oven for 30 minutes.",
@@ -260,6 +272,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 1,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
       "1 Preheat the oven to 200C/ 180C fan/ gas mark 6",
       "2 Add all the veg and chopped tomatoes to a roasting tin, season with salt and pepper, and then scatter over half the Cook With M&S Cajun seasoning. Drizzle with olive oil and toss so everything is evenly coated. Place in the oven for 30 minutes.",
@@ -302,6 +317,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 1,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
       "1 Peel and cut the apples in thin slices.",
       "2 Roll out the puff pastry with a rolling pin.",
@@ -355,6 +373,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 1,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
       "1 Peel and cut the apples into 1-2 inch strips.",
       "2 Put the apples in a bowl and mix in the lemon juice, sugar, cinnamon, nutmeg, and cornstarch and let it sit for 15 mins to release water.",
@@ -407,6 +428,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 0,
+    "pescetarian": 0,
+    "vegan": 0,
     "recipe_steps": [
       "1 Cook chicken breasts, shred, and set aside in a bowl.",
       "2 Cut up carrots and celery, place in pot and saute.",
@@ -448,6 +472,9 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 0,
+    "pescetarian": 0,
+    "vegan": 0,
     "recipe_steps": [
       "1 Chop and saute the onions and put the aside for a while",
       "2 Melt the butter on a pan and add the flour to it",
@@ -460,7 +487,7 @@
   },
   {
 	  "id": 1318,
-    "title": "POTATO LEEK SOUP (VEGETARIAN)",
+    "title": "POTATO LEEK SOUP",
     "summary": "",
     "prep_time_mins": 15,
     "cook_time_mins": 80,
@@ -495,12 +522,51 @@
       "salt": "0.79g",
       "sugar": "10.4g"
     },
+    "vegetarian": 1,
+    "pescetarian": 1,
+    "vegan": 0,
     "recipe_steps": [
       "1 Chop the white to light-green part of the leek into moderately sized pieces and discard the dark-green ends.",
       "2 Melt the butter in a pot on medium-low heat, add chopped leeks and potatoes. Stir until leeks are sweat.",
       "3 Add stock, bay leaf, pepper and optional ingredients now. Raise heat to medium-high, simmer until potatoes are tender.",
       "4 After removing the pot from the heat, remove the bay leaf and immersion blend pot until you reach a desired consistency.",
 	    "5 Stir in heavy cream and salt to taste."
+	  ]
+  },
+  {
+	  "id": 1319,
+    "title": "WE FORGOT TO INCLUDE A VEGAN RECIPE. OOPS",
+    "summary": "",
+    "prep_time_mins": 0,
+    "cook_time_mins": 0,
+    "servings": 0,
+    "difficulty": 0,
+    "image": "https://c.tenor.com/sVZ67fPzvFMAAAAS/heeseung420-spongebob.gif",
+    "photo_crop_file_name": "photo_crop20200i617-28-1til8ab",
+    "photo_crop_content_type": "image/jpeg",
+    "photo_crop_file_size": 327526,
+    "photo_crop_updated_at": "2020-06-17 11:37:37.779611",
+    "photo_crop_height": 2048,
+    "photo_crop_width": 2048,
+    "slug": "baked-barbecue-cod-fillets-with-a-crunchy-asian-inspired-salad",
+    "published_at": "2020-07-06 11:36:10.600409",
+    "source": "",
+    "course": "main",
+    "youtube_url": "https://www.youtube.com/watch?v=mCaYkURvXiM",
+    "ingredients": [
+      " hi"
+    ],
+    "nutrition": {
+      "calories": 0,
+      "fat": "0",
+      "salt": "0",
+      "sugar": "0"
+    },
+    "vegetarian": 1,
+    "pescetarian": 1,
+    "vegan": 1,
+    "recipe_steps": [
+      ":)"
 	  ]
   }
 ]
