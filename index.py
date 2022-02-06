@@ -65,6 +65,7 @@ def getRecipesFromIngredients():
 @cross_origin()
 def sendDiet():
     diet = request.args.getlist('diet')
+    return diet
 
 def pruneDiet(initialRecipes):
     sentDiet = sendDiet()
