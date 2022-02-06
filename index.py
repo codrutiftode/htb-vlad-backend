@@ -20,7 +20,7 @@ def api():
 #         return text
 
 def parseRecipeIngredients(recipe):
-    ingredients = recipe['ingredients']
+    ingredients = recipe['ingredients'].copy()
     for i in range(len(ingredients)):
         ingredients[i] = ingredients[i].split(" ")[1:]
         ingredients[i] = ' '.join(ingredients[i])
@@ -43,25 +43,24 @@ def getRecipeRanks(ingredients, recipes):
 """
     ingredientString should be the format of ingredient1&ingredient2&...&ingredientn
 """
-@app.route('/api/getRecipesFromIngredients/<ingredientString>', methods=['GET', 'POST'])
-def getRecipesFromIngredients(ingredientString):
-    ingredients = ingredientString.split("&")
+@app.route('/api/getRecipesFromIngredients', methods=['GET', 'POST'])
+def getRecipesFromIngredients():
+    # ingredients = ingredientString.split("&")
+    ingredients = request.args.getlist('ingredients')
     ranks = getRecipeRanks(ingredients, allRecipes)
     recipes = allRecipes
-    recipe_rank_tuples=[(recipes[i],rank[i]) for i in range(len(ranks))]
+    recipe_rank_tuples=[(recipes[i],ranks[i]) for i in range(len(ranks))]
+    # bubble sort
+    for i in range(0,len(recipe_rank_tuples)-1):  
+        for j in range(len(recipe_rank_tuples)-1):  
+            if(recipe_rank_tuples[j][1]>recipe_rank_tuples[j+1][1]):  
+                temp = recipe_rank_tuples[j]  
+                recipe_rank_tuples[j] = recipe_rank_tuples[j+1]  
+                recipe_rank_tuples[j+1] = temp  
+    final_recipes = [t[0] for t in recipe_rank_tuples]
 
-    # insertion sort:
-    for i in range(1, len(recipe_rank_tuples)):
-        key = recipe_rank_tuples[i][1]
-        j = i-1
-        while j >=0 and key < recipe_rank_tuples[j][1] :
-                recipe_rank_tuples[j+1] = recipe_rank_tuples[j]
-                j -= 1
-        recipe_rank_tuples[j+1] = key
+    return str(final_recipes)
     
-    final_recipes = [t[1] for t in recipe_rank_tuples]
-
-    return final_recipes
 
 
 @app.route('/api/getAllIngredients')
