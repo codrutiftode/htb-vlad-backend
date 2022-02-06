@@ -69,12 +69,12 @@ def sendDiet():
     return("")
 
 def pruneDiet(initialRecipes):
-    sentDiet = diet
+    global diet
     recipes_to_return = []
-    if sentDiet == None:
+    if diet == None:
         return initialRecipes
     for recipe in initialRecipes:
-        if recipe["diet"] == sentDiet:
+        if recipe["diet"] == diet:
             recipes_to_return.append(recipe)
     return recipes_to_return
 
