@@ -40,10 +40,28 @@ def getRecipeRanks(ingredients, recipes):
         ranks[r] = rank
     return ranks
 
-
+"""
+    ingredientString should be the format of ingredient1&ingredient2&...&ingredientn
+"""
 @app.route('/api/getRecipesFromIngredients/<ingredientString>', methods=['GET', 'POST'])
 def getRecipesFromIngredients(ingredientString):
-    return ingredientString
+    ingredients = ingredientString.split("&")
+    ranks = getRecipeRanks(ingredients, allRecipes)
+    recipes = allRecipes
+    recipe_rank_tuples=[(recipes[i],rank[i]) for i in range(len(ranks))]
+
+    # insertion sort:
+    for i in range(1, len(recipe_rank_tuples)):
+        key = recipe_rank_tuples[i][1]
+        j = i-1
+        while j >=0 and key < recipe_rank_tuples[j][1] :
+                recipe_rank_tuples[j+1] = recipe_rank_tuples[j]
+                j -= 1
+        recipe_rank_tuples[j+1] = key
+    
+    final_recipes = [t[1] for t in recipe_rank_tuples]
+
+    return final_recipes
 
 
 @app.route('/api/getAllIngredients')
