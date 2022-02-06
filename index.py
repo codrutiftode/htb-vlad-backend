@@ -45,15 +45,22 @@ def getIngredients(idArray):
             recipeArray.append(getIngredientObj(i))
     return recipeArray
 """
+def initIngredients():
+    global allIngredients
+    filename = os.path.join(app.static_folder, './data/ingredients.json')
+    with open(filename) as ingredients_file:
+        allIngredients = json.load(ingredients_file)
 
-global allIngredients, allRecipes
-filename = os.path.join(app.static_folder, './data/ingredients.json')
-with open(filename) as ingredients_file:
-    allIngredients = json.load(ingredients_file)
 
-filename = os.path.join(app.static_folder, './data/recipes.json')
-with open(filename) as recipes_file:
-    allRecipes = json.load(recipes_file)
+def initRecipes():
+    global allRecipes
+    filename = os.path.join(app.static_folder, './data/recipes.json')
+    with open(filename) as recipes_file:
+        allRecipes = json.load(recipes_file)
+
+
+initIngredients()
+initRecipes()
 
 
 @app.route('/api/getIngredientObj/<id>', methods = ['GET', 'POST'])
@@ -67,9 +74,12 @@ def getIngredientObj(id):
                     return ingredient
 
 
+@app.route('/api/getRecipeObj/<id>', methods = ['GET', 'POST'])
 def getRecipeObj(id):
     id = int(id)
-
+    for r in allRecipes:
+        if r['id'] == id:
+            return str(r['ingredients'])
 
 
 @app.route('/api/getIngredientName/<id>', methods = ['GET', 'POST'])
@@ -80,6 +90,9 @@ def getIngredientName(id):
 @app.route('/api/getRecipeIngredients/<id>', methods = ['GET', 'POST'])
 def getRecipeIngredients(id):
     return (getRecipeObj(id))['ingredients']
+
+
+
 
 
     """
