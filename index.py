@@ -64,7 +64,7 @@ def getRecipesFromIngredients():
 @app.route('/api/sendDiet', methods = ['GET'])
 @cross_origin()
 def sendDiet():
-    diet = request.args.getlist('diet')
+    diet = request.args.getstring('diet')
     return diet
 
 def pruneDiet(initialRecipes):
