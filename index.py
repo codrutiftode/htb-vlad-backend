@@ -57,8 +57,8 @@ def getRecipesFromIngredients():
                 temp = recipe_rank_tuples[j]  
                 recipe_rank_tuples[j] = recipe_rank_tuples[j+1]  
                 recipe_rank_tuples[j+1] = temp  
-    final_recipes = [t[0] for t in recipe_rank_tuples]
-
+    final_recipes = [t[0] for t in recipe_rank_tuples if t[1] > 0]
+    final_recipes = list(dict.fromkeys(mylist))
     return jsonify(final_recipes)
     
 
