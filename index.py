@@ -66,6 +66,7 @@ def getRecipesFromIngredients():
 def sendDiet():
     global diet
     diet = request.args.get('diet')
+    return("")
 
 def pruneDiet(initialRecipes):
     sentDiet = diet
