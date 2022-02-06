@@ -4,9 +4,12 @@ from flask import Flask
 from flask import json
 from flask import jsonify
 from flask import request
+from flask_cors import CORS, cross_origin
+import flask_cors
 
 
 app = Flask(__name__)
+cors = CORS(app)
 
 @app.route('/api/hello')
 def api():
@@ -40,10 +43,8 @@ def getRecipeRanks(ingredients, recipes):
         ranks[r] = rank
     return ranks
 
-"""
-    ingredientString should be the format of ingredient1&ingredient2&...&ingredientn
-"""
-@app.route('/api/getRecipesFromIngredients', methods=['GET', 'POST'])
+@app.route('/api/getRecipesFromIngredients')
+@cross_origin()
 def getRecipesFromIngredients():
     # ingredients = ingredientString.split("&")
     ingredients = request.args.getlist('ingredients')
@@ -58,24 +59,21 @@ def getRecipesFromIngredients():
                 recipe_rank_tuples[j] = recipe_rank_tuples[j+1]  
                 recipe_rank_tuples[j+1] = temp  
     final_recipes = [t[0] for t in recipe_rank_tuples]
+    print(final_recipes)
 
-    # Prevent CORS error
-    response = jsonify(final_recipes)
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
+    return jsonify(final_recipes)
     
 
 
 @app.route('/api/getAllIngredients')
+@cross_origin()
 def getAllIngredients():
     global allIngredients
     filename = os.path.join(app.static_folder, './data/ingredients.json')
     with open(filename) as ingredients_file:
         allIngredients = json.load(ingredients_file)
         
-    response = jsonify(allIngredients)
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    return response
+    return jsonify(allIngredients)
 
 
 """
