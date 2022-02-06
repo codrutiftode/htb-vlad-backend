@@ -60,12 +60,13 @@ def getRecipesFromIngredients():
             final_recipe_titles.append(recipe["title"])
             recipes_to_return.append(recipe)
 
-    pruneDiet(diet, recipes_to_return)
+    recipes_to_return = pruneDiet(diet, recipes_to_return)
     return jsonify(recipes_to_return)
 
 
 def pruneDiet(diet, initialRecipes):
     recipes_to_return = []
+    print(diet)
     if diet == "":
         return initialRecipes
     for recipe in initialRecipes:
