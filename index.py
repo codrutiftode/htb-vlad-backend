@@ -42,6 +42,7 @@ def getRecipeRanks(ingredients, recipes):
 @cross_origin()
 def getRecipesFromIngredients():
     ingredients = request.args.getlist('ingredients')
+    diet = request.args.get("diet")
     ranks = getRecipeRanks(ingredients, allRecipes)
     recipes = allRecipes
     recipe_rank_tuples=[(recipes[i],ranks[i]) for i in range(len(ranks))]
@@ -58,20 +59,14 @@ def getRecipesFromIngredients():
         if recipe["title"] not in final_recipe_titles:
             final_recipe_titles.append(recipe["title"])
             recipes_to_return.append(recipe)
-    pruneDiet(recipes_to_return)
-    return jsonify(recipes_to_return)
-    
-@app.route('/api/sendDiet', methods = ['GET'])
-@cross_origin()
-def sendDiet():
-    global diet
-    diet = request.args.get('diet')
-    return("")
 
-def pruneDiet(initialRecipes):
-    global diet
+    pruneDiet(diet, recipes_to_return)
+    return jsonify(recipes_to_return)
+
+
+def pruneDiet(diet, initialRecipes):
     recipes_to_return = []
-    if diet == None:
+    if diet == "":
         return initialRecipes
     for recipe in initialRecipes:
         if recipe["diet"] == diet:
