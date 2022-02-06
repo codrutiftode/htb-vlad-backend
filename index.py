@@ -58,8 +58,25 @@ def getRecipesFromIngredients():
         if recipe["title"] not in final_recipe_titles:
             final_recipe_titles.append(recipe["title"])
             recipes_to_return.append(recipe)
+    pruneDiet(recipes_to_return)
     return jsonify(recipes_to_return)
     
+@app.route('/api/sendDiet', methods = ['GET'])
+@cross_origin()
+def sendDiet():
+    diet = request.args.getlist('diet')
+
+def pruneDiet(initialRecipes):
+    sentDiet = sendDiet()
+    recipes_to_return = []
+    if sentDiet == None:
+        return initialRecipes
+    for recipe in initialRecipes:
+        if recipe["diet"] == sentDiet:
+            recipes_to_return.append(recipe)
+    return recipes_to_return
+
+
 # returns a list of ingredient objects
 @app.route('/api/getAllIngredients')
 @cross_origin()
