@@ -58,11 +58,13 @@ def getRecipesFromIngredients():
                 recipe_rank_tuples[j] = recipe_rank_tuples[j+1]  
                 recipe_rank_tuples[j+1] = temp  
     final_recipes = [t[0] for t in recipe_rank_tuples if t[1] > 0]
-    final_final_recipes = []
+    final_recipe_titles = []
+    recipes_to_return = []
     for recipe in final_recipes:
-        if recipe not in final_final_recipes:
-            final_final_recipes.append(recipe)
-    return jsonify(final_final_recipes)
+        if recipe["title"] not in final_recipe_titles:
+            final_recipe_titles.append(recipe["title"])
+            recipes_to_return.append(recipe)
+    return jsonify(recipes_to_return)
     
 
 
