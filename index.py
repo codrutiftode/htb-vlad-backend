@@ -78,7 +78,6 @@ def initIngredients():
     with open(filename) as ingredients_file:
         allIngredients = json.load(ingredients_file)
 
-
 def initRecipes():
     global allRecipes
     filename = os.path.join(app.static_folder, './data/recipes.json')
